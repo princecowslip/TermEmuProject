@@ -6,7 +6,7 @@
 compileSdk           = "36"
 targetSdk            = "36"
 minSdk               = "28"
-ndk                  = "29.0.1"
+ndk                  = "28.2.13676358"
 cmake                = "4.1.2"
 buildTools           = "36.0.0"
 
@@ -17,16 +17,16 @@ kotlin               = "2.1.20"
 # AndroidX
 coreKtx              = "1.16.0"
 appcompat            = "1.7.0"
-activity             = "1.10.1"
+activity             = "1.13.0"
 constraintlayout     = "2.2.1"
 
 # Native / audio
-oboe                 = "1.9.3"
+oboe                 = "1.10.0"
 
 # Testing
 junit                = "4.13.2"
-junitExt             = "1.2.1"
-espresso             = "3.6.1"
+junitExt             = "1.3.0"
+espresso             = "3.7.0"
 
 [plugins]
 android-application  = { id = "com.android.application", version.ref = "agp" }
