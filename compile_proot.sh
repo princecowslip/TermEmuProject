@@ -2,7 +2,7 @@
 set -e
 
 echo "[*] Installing compilation toolchain..."
-pkg install -y git make clang pkg-config libtalloc
+apt install -y git make clang pkg-config libtalloc2
 
 # Clone the PRoot repository modified for Android compatibility
 echo "[*] Cloning PRoot source code..."

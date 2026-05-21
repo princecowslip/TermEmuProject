@@ -1,14 +1,14 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # build_rootfs.sh
-# Fetches the official Debian bookworm arm64 rootfs from Docker Hub and
+# Fetches the official Debian trixie arm64 rootfs from Docker Hub and
 # packages it as the debian-rootfs.tar.xz asset expected by the Android app.
 #
-# Requires: curl, tar, jq, xz-utils  (pkg install curl tar jq xz-utils)
+# Requires: curl, tar, jq, xz-utils  (apt install curl tar jq xz-utils)
 # Must be run on an arm64 device (or cross-build environment).
 
 set -euo pipefail
 
-DEBIAN_VERSION="bookworm"
+DEBIAN_VERSION="trixie"
 TARGET_ARCH="arm64"          # the architecture we build for
 TARGET_DIR="$HOME/debian-bootstrap"
 # Resolve the output path relative to this script so it works from any CWD.
@@ -20,7 +20,7 @@ mkdir -p "$TARGET_DIR" "$OUTPUT_DIR"
 cd "$TARGET_DIR"
 
 # 1. Install minimal tools
-pkg install -y curl tar jq xz-utils
+apt install -y curl tar jq xz-utils
 
 # 2. Obtain a Docker Hub pull token for the debian repository
 echo "[*] Fetching Docker Hub auth token..."
