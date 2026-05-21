@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application -->
+    <string name="app_name">TermEmu</string>
+    <string name="app_description">A hardware-accelerated terminal emulator with Linux container support.</string>
+
+    <!-- Terminal session -->
+    <string name="session_title">Terminal Session</string>
+    <string name="session_connecting">Connecting…</string>
+    <string name="session_disconnected">Session disconnected.</string>
+    <string name="session_error">Session error: %1$s</string>
+
+    <!-- Setup / container -->
+    <string name="setup_extracting">Setting up Linux environment…</string>
+    <string name="setup_complete">Environment ready.</string>
+    <string name="setup_error">Setup failed: %1$s</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Terminal Service</string>
+    <string name="notification_channel_desc">Keeps terminal sessions alive in the background.</string>
+    <string name="notification_title">TermEmu is running</string>
+    <string name="notification_text">Terminal session active</string>
+
+    <!-- Menus / actions -->
+    <string name="action_new_session">New Session</string>
+    <string name="action_close_session">Close Session</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_paste">Paste</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Accessibility -->
+    <string name="terminal_view_desc">Terminal output area</string>
+    <string name="media_overlay_desc">Media overlay area</string>
+</resources>

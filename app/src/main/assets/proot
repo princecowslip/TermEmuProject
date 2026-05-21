@@ -1,0 +1,4 @@
+# proot — cross-compiled aarch64 binary placeholder
+# Replace this file with the actual PRoot binary compiled for Android/aarch64.
+# Build from source: https://github.com/proot-me/proot
+# Recommended: use a pre-built binary from the Termux packages repository.

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    themes.xml
+    Application theme definitions.
+    TermEmu uses a full-screen, edge-to-edge dark theme with no action bar.
+-->
+<resources>
+
+    <!-- Base application theme -->
+    <style name="Theme.TermEmu" parent="Theme.AppCompat.NoActionBar">
+        <!-- Status bar / navigation bar match the terminal background -->
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+        <item name="android:navigationBarColor">@color/nav_bar_color</item>
+        <!-- Window background matches terminal canvas -->
+        <item name="android:windowBackground">@color/terminal_background</item>
+        <!-- Keep the display on during active sessions (belt-and-suspenders with FLAG_KEEP_SCREEN_ON) -->
+        <item name="android:keepScreenOn">true</item>
+        <!-- Opt into edge-to-edge layout handled programmatically in MainActivity -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <!-- No title bar chrome -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+</resources>

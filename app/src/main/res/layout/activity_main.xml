@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_main.xml
+    Root layout: TerminalView occupies the full screen.
+    MediaOverlayView (SurfaceView) is layered on top and tracks the text viewport
+    for rendering inline Kitty graphics protocol media frames.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/terminal_background"
+    android:fitsSystemWindows="false">
+
+    <!-- Primary text canvas: handles character grid rendering and touch/IME input -->
+    <com.yourname.termemu.TerminalView
+        android:id="@+id/terminalView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+        Hardware-accelerated overlay for inline media frames.
+        Positioned and sized programmatically by MediaOverlayView to align
+        with character cell boundaries reported by TerminalView.
+    -->
+    <com.yourname.termemu.MediaOverlayView
+        android:id="@+id/mediaOverlayView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/terminalView"
+        app:layout_constraintEnd_toEndOf="@id/terminalView"
+        app:layout_constraintStart_toStartOf="@id/terminalView"
+        app:layout_constraintTop_toTopOf="@id/terminalView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

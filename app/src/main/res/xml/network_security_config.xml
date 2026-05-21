@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    network_security_config.xml
+    Permits cleartext (HTTP/non-TLS) traffic on the loopback interface only.
+    This enables SSH and other local-only services running inside the container
+    to communicate with the host app without exposing broader network surfaces.
+-->
+<network-security-config>
+
+    <!-- Localhost loopback: allow cleartext for internal SSH / container services -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">::1</domain>
+    </domain-config>
+
+    <!-- All other destinations: enforce TLS, no cleartext -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+</network-security-config>

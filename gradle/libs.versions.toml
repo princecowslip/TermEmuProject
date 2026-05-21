@@ -1,0 +1,48 @@
+# gradle/libs.versions.toml
+# Centralized version catalog — single source of truth for all dependency versions.
+
+[versions]
+# Android platform
+compileSdk           = "36"
+targetSdk            = "36"
+minSdk               = "28"
+ndk                  = "29.0.1"
+cmake                = "4.1.2"
+buildTools           = "36.0.0"
+
+# Build tooling
+agp                  = "9.0.0"
+kotlin               = "2.1.20"
+
+# AndroidX
+coreKtx              = "1.16.0"
+appcompat            = "1.7.0"
+activity             = "1.10.1"
+constraintlayout     = "2.2.1"
+
+# Native / audio
+oboe                 = "1.9.3"
+
+# Testing
+junit                = "4.13.2"
+junitExt             = "1.2.1"
+espresso             = "3.6.1"
+
+[plugins]
+android-application  = { id = "com.android.application", version.ref = "agp" }
+kotlin-android       = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+[libraries]
+# AndroidX
+androidx-core-ktx           = { group = "androidx.core",             name = "core-ktx",          version.ref = "coreKtx" }
+androidx-appcompat          = { group = "androidx.appcompat",         name = "appcompat",         version.ref = "appcompat" }
+androidx-activity-ktx       = { group = "androidx.activity",          name = "activity-ktx",      version.ref = "activity" }
+androidx-constraintlayout   = { group = "androidx.constraintlayout",  name = "constraintlayout",  version.ref = "constraintlayout" }
+
+# Native audio
+oboe                        = { group = "com.google.oboe",            name = "oboe",              version.ref = "oboe" }
+
+# Testing
+junit                       = { group = "junit",                      name = "junit",             version.ref = "junit" }
+androidx-junit              = { group = "androidx.test.ext",          name = "junit",             version.ref = "junitExt" }
+androidx-espresso-core      = { group = "androidx.test.espresso",     name = "espresso-core",     version.ref = "espresso" }

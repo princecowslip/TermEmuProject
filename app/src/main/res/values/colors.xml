@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    colors.xml
+    Termux-compatible ANSI 256-color terminal palette.
+    Standard 16 ANSI colors + terminal UI chrome colors.
+-->
+<resources>
+    <!-- ── Terminal chrome ─────────────────────────────────────────────── -->
+    <color name="terminal_background">#FF1C1C1C</color>
+    <color name="terminal_foreground">#FFEFEFEF</color>
+    <color name="terminal_cursor">#FFEFEF00</color>
+    <color name="terminal_selection">#664D90EE</color>
+
+    <!-- ── Standard ANSI colors (normal intensity) ────────────────────── -->
+    <!-- 0: Black -->
+    <color name="ansi_black">#FF000000</color>
+    <!-- 1: Red -->
+    <color name="ansi_red">#FFCD3131</color>
+    <!-- 2: Green -->
+    <color name="ansi_green">#FF0DBC79</color>
+    <!-- 3: Yellow -->
+    <color name="ansi_yellow">#FFE5E510</color>
+    <!-- 4: Blue -->
+    <color name="ansi_blue">#FF2472C8</color>
+    <!-- 5: Magenta -->
+    <color name="ansi_magenta">#FFBC3FBC</color>
+    <!-- 6: Cyan -->
+    <color name="ansi_cyan">#FF11A8CD</color>
+    <!-- 7: White -->
+    <color name="ansi_white">#FFE5E5E5</color>
+
+    <!-- ── Bright ANSI colors (high intensity) ───────────────────────── -->
+    <!-- 8: Bright Black (dark gray) -->
+    <color name="ansi_bright_black">#FF666666</color>
+    <!-- 9: Bright Red -->
+    <color name="ansi_bright_red">#FFF14C4C</color>
+    <!-- 10: Bright Green -->
+    <color name="ansi_bright_green">#FF23D18B</color>
+    <!-- 11: Bright Yellow -->
+    <color name="ansi_bright_yellow">#FFF5F543</color>
+    <!-- 12: Bright Blue -->
+    <color name="ansi_bright_blue">#FF3B8EEA</color>
+    <!-- 13: Bright Magenta -->
+    <color name="ansi_bright_magenta">#FFD670D6</color>
+    <!-- 14: Bright Cyan -->
+    <color name="ansi_bright_cyan">#FF29B8DB</color>
+    <!-- 15: Bright White -->
+    <color name="ansi_bright_white">#FFFFFFFF</color>
+
+    <!-- ── UI surface colors ──────────────────────────────────────────── -->
+    <color name="toolbar_background">#FF252526</color>
+    <color name="status_bar_color">#FF1C1C1C</color>
+    <color name="nav_bar_color">#FF1C1C1C</color>
+    <color name="key_extra_background">#FF3A3D41</color>
+    <color name="key_extra_foreground">#FFCCCCCC</color>
+</resources>

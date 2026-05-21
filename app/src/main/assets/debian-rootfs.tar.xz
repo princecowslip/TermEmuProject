@@ -1,0 +1,5 @@
+# debian-rootfs.tar.xz — placeholder
+# Replace with an actual minimal Debian ARM64 rootfs archive.
+# You can build one using debootstrap on a Linux host:
+#   debootstrap --arch=arm64 --variant=minbase bookworm ./rootfs
+#   tar -cJf debian-rootfs.tar.xz -C ./rootfs .
